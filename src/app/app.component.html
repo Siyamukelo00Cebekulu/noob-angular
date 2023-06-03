@@ -1,1 +1,8 @@
-<p> Hello World!<p>
+
+<input (keyup)="changeImage($event)" [value]="imgUrl">
+
+<img [src] ="imgUrl">
+
+<p> Hello {{name}}<p>
+<p> Hello {{ name.toUpperCase() }} </p>
+<p> Hello {{ getName() }}</p>

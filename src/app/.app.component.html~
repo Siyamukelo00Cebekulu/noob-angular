@@ -1,0 +1,5 @@
+<p> Hello {{ name }}</p>
+<p> Hello {{ name.toUpperCase() }} <p>
+<p>{{ getName() }} <p>
+
+

@@ -1,1 +1,26 @@
+import { Component } from '@angular/core';
 
+
+@Component({
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.css']
+})
+export class AppComponent
+{
+
+	name= 'Siya'
+
+	
+	
+	imgUrl = 'https://picsum.photos/id/237/500/500'
+
+	changeEvent(imgUrl)
+	{
+		return this.imgUrl
+	}
+	
+	getName() {
+		return this.name
+	}
+}
