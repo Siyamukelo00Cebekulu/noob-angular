@@ -1,8 +1,30 @@
+<ng-template [ngIf] = "blueClass">
+    <p> Button is Green.</p>
+</ng-template>
+
+<p *ngIf="blueClass">Button is Green(Short-hand)</p>
+
+<button (click)="blueClass = !blueClass"
+    [ngClass] = "{ blue: blueClass}"
+    [ngStyle] = "{'font-size.px': fontSize}"> Change
+</button>
+
+<hr> 
 
 <input (keyup)="changeImage($event)" [value]="imgUrl">
 
-<img [src] ="imgUrl">
+<app-post [postImg]="imgUrl" (imgSelected)="logImg($event)"> </app-post>
+
+<app-post *ngFor="let image of image; let i = index" [postImg]="image" (imgSelected)="
+logImg($event)">
+
+</app-post>
 
 <p> Hello {{name}}<p>
+<p> {{name | titlecase }} </p>
 <p> Hello {{ name.toUpperCase() }} </p>
 <p> Hello {{ getName() }}</p>
+<p> {{currentDate | date : 'MMMM d'}} </p>
+<p> {{cost | currency : 'GBP'}}</p>
+<p> {{temp | number: '1.1-2'}} </p>
+<pre> {{pizza | json}} </pre>

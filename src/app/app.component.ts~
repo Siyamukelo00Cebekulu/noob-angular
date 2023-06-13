@@ -12,12 +12,11 @@ export class AppComponent
 	name= 'Siya'
 
 	
-	
 	imgUrl = 'https://picsum.photos/id/237/500/500'
-
-	changeEvent(imgUrl)
+	
+	changeImage(e: KeyboardEvent)
 	{
-		return this.imgUrl
+		return this.imgUrl = (e.target as HTMLInputElement).value
 	}
 	
 	getName() {

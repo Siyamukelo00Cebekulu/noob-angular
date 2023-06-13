@@ -1,1 +1,8 @@
+p {
+	color: orange
+}
 
+input {
+	displat: block;
+	margin: 10 0
+}
